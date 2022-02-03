@@ -29,6 +29,14 @@ new Vue({
         },
         click: function() {
             alert("You clicked me");
+        },
+
+        //---------------KEYBOARD EVENTS
+        logName: function() {
+            console.log("you entered your name");
+        },
+        logAge: function() {
+            console.log("you entered your age");
         }
     }
 });
