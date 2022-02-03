@@ -16,6 +16,11 @@ new Vue({
 //---------------TWO WAY BINDING
        Name: '',
        Age: '',
+
+//---------------TWO WAY BINDING
+       ageC: 25,
+       a:0,
+       b:0
     },
     methods: {
         greet: function(time) {
@@ -42,6 +47,25 @@ new Vue({
         logAge: function() {
             console.log("you entered your age");
         },
-    
+
+//---------------TWO WAY BINDING
+        /*addToA: function(){
+            return this.a + this.age;
+          },
+          addToB: function(){
+            return this.b + this.age;
+          }*/
+    },
+
+    computed: {
+
+        addToA: function(){
+          console.log('addToA');
+          return this.a + this.age;
+        },
+        addToB: function(){
+           console.log('addTOB');
+          return this.b + this.age;
+        }
     }
 });
