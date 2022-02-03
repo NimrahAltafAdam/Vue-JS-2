@@ -6,11 +6,29 @@ new Vue({
         name: 'Shaun',
         job: 'Ninja',
         website: 'https://github.com/',
-        websiteTag: '<a v-bind:href="https://github.com/">Github</a>'
+        websiteTag: '<a v-bind:href="https://github.com/">Github</a>',
+
+        age: 25,
+
+        x:0,
+        y:0,
     },
     methods: {
         greet: function(time) {
             return 'Good ' + time + " " + this.name ;
+        },
+        add: function(inc) {
+            this.age = this.age + inc;
+        },
+        subtract: function(dec) {
+            this.age -= dec;
+        },
+        updateXY: function(event) {
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+        },
+        click: function() {
+            alert("You clicked me");
         }
     }
 });

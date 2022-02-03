@@ -10,11 +10,20 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>{{greet('afternoon')}}</h1>
+    <!--<h1>{{greet('afternoon')}}</h1>
     <p>{{name}}</p>
     <p>{{job}}</p>
     <a v-bind:href="website">Github</a>
-    <p v-html="websiteTag"></p>
+    <p v-html="websiteTag"></p>-->
+    <!--EVENTS-->
+    <h1>EVENTS</h1>
+    <button v-on:click.once="add(1)">Add</button>
+    <button @click="subtract(1)">Subtract</button>
+    <button @dblclick="add(10)">Add 10 years</button>
+    <button v-on:dblclick="subtract(10)">Subtract 10 years</button>
+    <p>My age is {{age}}</p>
+    <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
+    <a @click.prevent="click" href="https://github.com/">Github</a>
 </div>
 <script src="app.js"></script>
 </body>
