@@ -12,6 +12,10 @@ new Vue({
 
         x:0,
         y:0,
+
+//---------------TWO WAY BINDING
+       Name: '',
+       Age: '',
     },
     methods: {
         greet: function(time) {
@@ -37,6 +41,7 @@ new Vue({
         },
         logAge: function() {
             console.log("you entered your age");
-        }
+        },
+    
     }
 });
